@@ -5,7 +5,7 @@
 
 package pl.polsl.student.jakunow552.bestbankingoffer;
 
-import pl.polsl.student.jakunow552.bestbankingoffer.controller.UserInterface;
+import pl.polsl.student.jakunow552.bestbankingoffer.controller.Controller;
 
 /**
  *
@@ -14,7 +14,7 @@ import pl.polsl.student.jakunow552.bestbankingoffer.controller.UserInterface;
 public class BestBankingOffer {
 
     public static void main(String[] args) {
-        UserInterface ui = new UserInterface();
-        ui.getArgs(args);
+        Controller program = new Controller(args);        
+        program.start();
     }
 }
