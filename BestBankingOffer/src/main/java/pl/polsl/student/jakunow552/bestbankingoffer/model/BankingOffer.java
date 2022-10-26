@@ -4,17 +4,21 @@
  */
 package pl.polsl.student.jakunow552.bestbankingoffer.model;
 
-import java.util.HashMap;
-
 /**
  *
  * @author Student ETO-A 15
  */
-public class BankOffer {
+public class BankingOffer {
     private String bankName;
-    private String offerName;
-    private HashMap<String,String> properties;
-
+    private String offerName;  
+    private Type offerType;
+    private String description; 
+    protected enum Type{
+        CREDIT,
+        SAVINGS,
+        PERSONAL
+    }
+    
     public String getBankName() {
         return bankName;
     }
@@ -30,19 +34,27 @@ public class BankOffer {
     public void setOfferName(String offerName) {
         this.offerName = offerName;
     }
-
-    public HashMap<String, String> getProperties() {
-        return properties;
+    
+     public String getOfferTypeString() {
+        return offerType.toString();
+    }
+     public Type getOfferTypeEnum() {
+        return offerType;
     }
 
-    public void setProperties(HashMap<String, String> properties) {
-        this.properties = properties;
+    public void setOfferType(Type offerType) {
+        this.offerType = offerType;
     }
     
-    public BankOffer compare(BankOffer toCompare)
-    {
-        return null;
+    public String getDescription() {
+        return description;
     }
+
+    public void setDescription(String descritpion) {
+        this.description = descritpion;
+    }
+    
+    
     
     
 }
