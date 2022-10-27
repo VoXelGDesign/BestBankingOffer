@@ -11,10 +11,7 @@
       <ComponentRef name="null"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[980, 696]"/>
-    </Property>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[980, 696]"/>
+      <Dimension value="[980, 710]"/>
     </Property>
   </Properties>
   <SyntheticProperties>

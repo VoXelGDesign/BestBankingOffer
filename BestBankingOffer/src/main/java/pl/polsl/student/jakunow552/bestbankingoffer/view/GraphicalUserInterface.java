@@ -46,8 +46,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         setTitle("Best Banking Offer");
         setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         setIconImages(null);
-        setMinimumSize(new java.awt.Dimension(980, 696));
-        setPreferredSize(new java.awt.Dimension(980, 696));
+        setMinimumSize(new java.awt.Dimension(980, 710));
 
         jInternalFrame7.setBorder(null);
         jInternalFrame7.setVisible(true);
