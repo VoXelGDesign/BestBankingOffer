@@ -15,14 +15,14 @@ public class CreditOffer extends BankingOffer
     
     public CreditOffer(String bankName, float rateOfInterest, float serviceCharge)
     {
-        this.setOfferType(Type.CREDIT);
+        this.setOfferType("CREDIT");
         this.setBankName(bankName);
         this.setOfferName("No name");
     }
     
     public CreditOffer(String bankName,String offerName, float rateOfInterest, float serviceCharge)
     {
-        this.setOfferType(Type.CREDIT);
+        this.setOfferType("CREDIT");
         this.setBankName(bankName);
         this.setOfferName(offerName);
         

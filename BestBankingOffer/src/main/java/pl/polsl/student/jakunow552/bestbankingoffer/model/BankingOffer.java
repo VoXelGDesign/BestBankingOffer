@@ -10,14 +10,9 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  */
 public class BankingOffer {
     private String bankName;
-    private String offerName;  
-    private Type offerType;
+    private String offerName;     
     private String description; 
-    protected enum Type{
-        CREDIT,
-        SAVINGS,
-        PERSONAL
-    }
+    private String offerType;
     
     public String getBankName() {
         return bankName;
@@ -34,24 +29,19 @@ public class BankingOffer {
     public void setOfferName(String offerName) {
         this.offerName = offerName;
     }
-    
-     public String getOfferTypeString() {
-        return offerType.toString();
-    }
-     public Type getOfferTypeEnum() {
-        return offerType;
-    }
-
-    public void setOfferType(Type offerType) {
-        this.offerType = offerType;
-    }
-    
+       
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String descritpion) {
         this.description = descritpion;
+    }
+    public void setOfferType(String offerType){
+        this.offerType = offerType;
+    }
+    public String getOfferType(){
+        return offerType;
     }
     
     

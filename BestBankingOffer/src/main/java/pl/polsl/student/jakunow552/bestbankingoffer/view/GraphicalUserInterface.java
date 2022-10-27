@@ -7,14 +7,26 @@ package pl.polsl.student.jakunow552.bestbankingoffer.view;
 
 
 
+
+
+
+
 public class GraphicalUserInterface extends javax.swing.JFrame {
 
     /**
      * Creates new form GraphicalUserInterface
      */
+    private GuiTextContent Text = new GuiTextContent();
+    
+    public void AddToFirstList(String element){
+        jComboBox1.addItem(element);
+    }
+    public void AddToSecondList(String element){
+        jComboBox2.addItem(element);
+    }
     
     public GraphicalUserInterface() {
-        initComponents();
+        initComponents();       
     }
 
     /**
@@ -82,7 +94,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(400, 370));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 370));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -109,8 +120,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 5));
         jPanel5.setMinimumSize(new java.awt.Dimension(400, 370));
         jPanel5.setPreferredSize(new java.awt.Dimension(400, 370));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -181,6 +190,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jTextPane1.setText("< Choose option in the list");
         jTextPane1.setFocusable(false);
         jScrollPane2.setViewportView(jTextPane1);
+        jTextPane1.getAccessibleContext().setAccessibleName("");
 
         jList1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 5));
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
@@ -242,13 +252,13 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         
             switch(jList1.getSelectedIndex()){
                 case 0:
-                    jTextPane1.setText("Java app");
+                    jTextPane1.setText(Text.getGeneral());
                     break;
                 case 1:
-                    jTextPane1.setText("Just use this app");
+                    jTextPane1.setText(Text.getUsage());
                     break;
                 case 2:
-                    jTextPane1.setText("Idk");
+                    jTextPane1.setText(Text.getConsoleArgs());
                     break;
             }
     }//GEN-LAST:event_jList1ValueChanged

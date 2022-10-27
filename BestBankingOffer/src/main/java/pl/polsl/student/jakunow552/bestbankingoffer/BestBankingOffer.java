@@ -14,7 +14,7 @@ import pl.polsl.student.jakunow552.bestbankingoffer.controller.Controller;
 public class BestBankingOffer {
 
     public static void main(String[] args) {
-        Controller program = new Controller(args);        
+        Controller program = new Controller(args); 
         program.start();
     }
 }
