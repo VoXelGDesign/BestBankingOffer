@@ -10,7 +10,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.view;
  */
 public class GuiTextContent {
     private String general = 
-            "Best banking app allows to directly compare banking offers of specific category:\n\n"
+            "Best banking offer app allows to directly compare banking offers of specific category:\n\n"
             + "- CREDIT\n"
             + "- PERSONAL ACCOUNT\n"
             + "- SAVINGS ACCOUNT\n\n"
