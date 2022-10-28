@@ -3,14 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pl.polsl.student.jakunow552.bestbankingoffer.view;
-
-import java.util.ArrayList;
 import pl.polsl.student.jakunow552.bestbankingoffer.model.BankingOffer;
-
-
-
-
-
+import java.util.ArrayList;
 
 
 
@@ -20,16 +14,9 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
      * Creates new form GraphicalUserInterface
      */
     private GuiTextContent Text = new GuiTextContent();
-    
     private ArrayList<BankingOffer> offersList = new ArrayList<>();
     
-    public void setComboBox(ArrayList<BankingOffer> listOfOffers){
-        this.offersList = listOfOffers;
-        for(int i = 0; i < offersList.size(); i++){          
-            jComboBox1.addItem("("+offersList.get(i).getOfferType()+")"+offersList.get(i).getOfferName());
-            jComboBox2.addItem("("+offersList.get(i).getOfferType()+")"+offersList.get(i).getOfferName());          
-        }
-    }
+    
     
     public GraphicalUserInterface() {      
         initComponents();       
@@ -420,6 +407,14 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void uploadOffersList(ArrayList<BankingOffer> listOfOffers){
+        this.offersList = listOfOffers;
+        for(int i = 0; i < offersList.size(); i++){          
+            jComboBox1.addItem("("+offersList.get(i).getOfferType()+")"+offersList.get(i).getOfferName());
+            jComboBox2.addItem("("+offersList.get(i).getOfferType()+")"+offersList.get(i).getOfferName());          
+        }
+    }
+    
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
         // TODO add your handling code here:
         
@@ -443,9 +438,16 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        jTextPane2.setText(offersList.get(jComboBox1.getSelectedIndex()).getDescription());
-        jLabel1.setText(offersList.get(jComboBox1.getSelectedIndex()).getBankName());
-        jLabel2.setText(offersList.get(jComboBox1.getSelectedIndex()).getOfferName());
+        int index = jComboBox1.getSelectedIndex();
+        String description = offersList.get(index).getDescription();
+        String bankName = offersList.get(index).getBankName();
+        String offerName = offersList.get(index).getOfferName();
+        String properties = offersList.get(index).getProperties().toString().replaceAll("[{}]"," ");
+        
+        jTextPane2.setText(description);
+        jLabel1.setText(bankName);
+        jLabel2.setText(offerName);
+        jTextPane4.setText(properties);
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
@@ -454,9 +456,16 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-        jTextPane3.setText(offersList.get(jComboBox2.getSelectedIndex()).getDescription());
-        jLabel3.setText(offersList.get(jComboBox2.getSelectedIndex()).getBankName());
-        jLabel4.setText(offersList.get(jComboBox2.getSelectedIndex()).getOfferName());
+           int index = jComboBox2.getSelectedIndex();
+        String description = offersList.get(index).getDescription();
+        String bankName = offersList.get(index).getBankName();
+        String offerName = offersList.get(index).getOfferName();
+        String properties = offersList.get(index).getProperties().toString().replaceAll("[{}]"," ");
+        
+        jTextPane3.setText(description);
+        jLabel3.setText(bankName);
+        jLabel4.setText(offerName);
+        jTextPane5.setText(properties);
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
    

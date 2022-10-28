@@ -10,14 +10,16 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  */
 public class CreditOffer extends BankingOffer
 {
-    private float rateOfInterest;
-    private float serviceCharge;
+    
+  
     
     public CreditOffer(String bankName, float rateOfInterest, float serviceCharge)
     {
         this.setOfferType("CREDIT");
         this.setBankName(bankName);
         this.setOfferName("No name");
+        this.setProperty("Rate of Interest", rateOfInterest);
+        this.setProperty("Service Charge", serviceCharge);
     }
     
     public CreditOffer(String bankName,String offerName, float rateOfInterest, float serviceCharge)
@@ -25,28 +27,29 @@ public class CreditOffer extends BankingOffer
         this.setOfferType("CREDIT");
         this.setBankName(bankName);
         this.setOfferName(offerName);
-        
+        this.setProperty("Rate of Interest", rateOfInterest);
+        this.setProperty("Service Charge", serviceCharge);
     }
     
     public float getRateOfInterest()
     {
-        return this.rateOfInterest;
+        return this.getPropertyValue("Rate of Interest");
     }
     
     public void setRateOfInterest(float rateOfInterest)
     {
-        this.rateOfInterest = rateOfInterest;
+        this.setProperty("Rate of Interest", rateOfInterest);
     }
     
     public float getServiceCharge()
     {
-        return this.serviceCharge;
+        return this.getPropertyValue("Service Charge");
     }
     
     public void setServiceCharge(float serviceCharge)
     {
-        this.serviceCharge = serviceCharge;
-    }
+        this.setProperty("Service Charge", serviceCharge);
+    }   
     
     
      public CreditOffer compareOffers(CreditOffer offer)
@@ -59,5 +62,7 @@ public class CreditOffer extends BankingOffer
          }
          
      }
+     
+     
     
 }
