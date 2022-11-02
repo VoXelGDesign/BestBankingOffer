@@ -442,7 +442,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         String description = offersList.get(index).getDescription();
         String bankName = offersList.get(index).getBankName();
         String offerName = offersList.get(index).getOfferName();
-        String properties = offersList.get(index).getProperties().toString().replaceAll("[{}]"," ");
+        String properties = offersList.get(index).getProperties().toString().replaceAll("[{}]","");
         
         jTextPane2.setText(description);
         jLabel1.setText(bankName);
@@ -460,7 +460,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         String description = offersList.get(index).getDescription();
         String bankName = offersList.get(index).getBankName();
         String offerName = offersList.get(index).getOfferName();
-        String properties = offersList.get(index).getProperties().toString().replaceAll("[{}]"," ");
+        String properties = offersList.get(index).getProperties().toString().replaceAll("[{}]","");
         
         jTextPane3.setText(description);
         jLabel3.setText(bankName);

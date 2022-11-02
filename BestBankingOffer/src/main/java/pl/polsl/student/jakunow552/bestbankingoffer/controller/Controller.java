@@ -5,6 +5,8 @@
 package pl.polsl.student.jakunow552.bestbankingoffer.controller;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import pl.polsl.student.jakunow552.bestbankingoffer.model.BankingOffer;
@@ -46,7 +48,8 @@ public class Controller {
             var window = new GraphicalUserInterface();
             window.uploadOffersList(this.offersList);
             window.setVisible(true);
-                         
+            
+        
         }
         else if(params.contains("-help")){
             tui.textHelp();
@@ -58,7 +61,6 @@ public class Controller {
             tui.invalidParams();
             tui.textHelp();
         }
-        
         
         
     }
