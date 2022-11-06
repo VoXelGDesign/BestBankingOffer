@@ -17,6 +17,10 @@ public abstract class BankingOffer {
     private String offerType;
     private HashMap<String,Float> properties = new HashMap<String,Float>();
     
+     protected void setOfferType(String offerType){
+        this.offerType = offerType;
+    }
+    
     public String getBankName() {
         return bankName;
     }
@@ -40,9 +44,7 @@ public abstract class BankingOffer {
     public void setDescription(String descritpion) {
         this.description = descritpion;
     }
-    public void setOfferType(String offerType){
-        this.offerType = offerType;
-    }
+   
     public String getOfferType(){
         return offerType;
     }

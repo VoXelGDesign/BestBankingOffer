@@ -148,6 +148,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 3));
 
+        jTextPane4.setBorder(null);
         jTextPane4.setFocusable(false);
         jScrollPane5.setViewportView(jTextPane4);
 
@@ -217,9 +218,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setText("jLabel3");
-        jLabel3.setMaximumSize(new java.awt.Dimension(75, 32));
-        jLabel3.setMinimumSize(new java.awt.Dimension(75, 32));
-        jLabel3.setPreferredSize(new java.awt.Dimension(75, 32));
 
         jLabel4.setText("jLabel4");
 
@@ -230,18 +228,18 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(28, 28, 28))
+                .addGap(34, 34, 34))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 3));
@@ -409,9 +407,10 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
     public void uploadOffersList(ArrayList<BankingOffer> listOfOffers){
         this.offersList = listOfOffers;
-        for(int i = 0; i < offersList.size(); i++){          
-            jComboBox1.addItem("("+offersList.get(i).getOfferType()+")"+offersList.get(i).getOfferName());
-            jComboBox2.addItem("("+offersList.get(i).getOfferType()+")"+offersList.get(i).getOfferName());          
+        for(int i = 0; i < offersList.size(); i++){
+            String offerType = offersList.get(i).getOfferType();
+            jComboBox1.addItem("("+offerType+")"+offersList.get(i).getOfferName());
+            jComboBox2.addItem("("+offerType+")"+offersList.get(i).getOfferName());          
         }
     }
     
