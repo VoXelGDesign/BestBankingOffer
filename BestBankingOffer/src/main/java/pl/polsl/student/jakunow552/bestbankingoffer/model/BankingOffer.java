@@ -7,8 +7,14 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
 import java.util.HashMap;
 
 /**
- *
- * @author Student ETO-A 15
+ * Main class, all other classes used in model extends this class.<p>
+ * {@link BankingOffer#bankName} - bank name that have this offer.<p>
+ * {@link BankingOffer#offerName} - custom name of this offer<p>
+ * {@link BankingOffer#description} - descripton of the offer<p>
+ * {@link BankingOffer#offerType} - type of offer (set only by the method setOfferType used in subclass constructor)<p>
+ * {@link BankingOffer#properties} - hash map with property {@link String} name as a key and {@link float} value.<p>
+ * @version 1.0-FINAL
+ * @author Jakub Nowakowski
  */
 public abstract class BankingOffer {
     private String bankName;
@@ -17,52 +23,112 @@ public abstract class BankingOffer {
     private String offerType;
     private HashMap<String,Float> properties = new HashMap<String,Float>();
     
+    /**
+     * Sets offer type provied by method argument.
+     * used only in subcalss constructor.
+     * @param offerType {@link String} type of offer.
+     */
      protected void setOfferType(String offerType){
         this.offerType = offerType;
     }
-    
+    /**
+     * Method returns name of the bank.
+     * @return {@link String} bank name.
+     */
     public String getBankName() {
         return bankName;
     }
-
+    /**
+     * Method sets bank name as a String.
+     * @param bankName {@link String} bank name.
+     */
     public void setBankName(String bankName) {
         this.bankName = bankName;
     }
-
+    /**
+     * Method returns offer name as String.
+     * @return {@link String} offer name.
+     */
     public String getOfferName() {
         return offerName;
     }
-
+    /**
+     * Method sets offer name as a String.
+     * @param offerName {@link String} offer name.
+     */
     public void setOfferName(String offerName) {
         this.offerName = offerName;
     }
-       
+    /**
+     * Method returns descrition of the offer.
+     * @return {@link String} offer description.
+     */
     public String getDescription() {
         return description;
     }
-
+    /**
+     * Method sets description of the offer.
+     * @param descritpion {@link String} offer description
+     */
     public void setDescription(String descritpion) {
         this.description = descritpion;
     }
-   
+    /**
+     * Method returns offer type.
+     * @return {@link String} offer type.
+     */
     public String getOfferType(){
         return offerType;
     }
-    
+    /**
+     * Method returns hash map of offer properties
+     * @return hash map of {@link BankingOffer#properties} where key is {@link String} and value is {@link float}.
+     */
     public HashMap<String, Float> getProperties()
     {
         return properties;
     }
+    /**
+     * Method returns value of provided property {@link BankingOffer#properties}.
+     * @param name {@link String} name of property value to return.
+     * @return {@link float} value of provided property.
+     */
     public float getPropertyValue(String name)
     {
         return properties.get(name);
     }
+    /**
+     * Method add new property or modify existing one.
+     * @param name {@link String} name of property.
+     * @param value {@link float} value of property.<p>
+     * If there is existing name of property same as provieded
+     * value will be updated.
+     */
     public void setProperty(String name, float value){
         this.properties.put(name, value);
     }
     
-     public void compareOffers(){}
+    /**
+     * This method is overridden by subclasses methods.
+     * Each class applies own logic to compare properties.
+     */
+     public BankingOffer compareOffers(BankingOffer offer){
+         return null;
+     }
     
-    
+     /**
+      * This method comapres offer obejct types 
+      * and throws exception when they do not mach.
+      * @param a first offer object to compare {@link BankingOffer}.
+      * @param b second offer offer object to compare{@link BankingOffer}.
+      * @throws TypeException exepction thrown when type of comapring objects is different.
+      */
+     public void checkTypeCoherence(BankingOffer a, BankingOffer b)throws TypeException{
+         if(a.getOfferType() != b.getOfferType()){
+             throw new TypeException("\n"+"Type of offers differs!");
+         }
+         
+         
+     }
     
 }

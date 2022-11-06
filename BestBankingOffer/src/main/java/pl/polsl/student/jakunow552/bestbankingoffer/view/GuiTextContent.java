@@ -5,8 +5,9 @@
 package pl.polsl.student.jakunow552.bestbankingoffer.view;
 
 /**
- *
- * @author tryne
+ * Graphical user interface text content class, this class store text that is always displayed.
+ * @version 1.0-FINAL
+ * @author Jakub Nowakowski
  */
 public class GuiTextContent {
     private String general = 
@@ -20,16 +21,26 @@ public class GuiTextContent {
     private String usage;
     private String consoleArgs;
     
+    /**
+     * Returns text content of "General" tab.
+     * @return {@link String} general tab content.
+     */
     public String getGeneral()
     {
         return general;
     }
-    
+    /**
+     * Returns text content of "Usage" tab.
+     * @return {@link String} usage tab content.
+     */
     public String getUsage()
     {
         return usage;
     }
-    
+    /**
+     * Returns text content of "Console Args" tab.
+     * @return {@link String} console arguments tab content.
+     */
     public String getConsoleArgs()
     {
         return consoleArgs;

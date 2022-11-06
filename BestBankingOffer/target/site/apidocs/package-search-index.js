@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"pl.polsl.student.jakunow552.bestbankingoffer"},{"l":"pl.polsl.student.jakunow552.bestbankingoffer.controller"},{"l":"pl.polsl.student.jakunow552.bestbankingoffer.model"},{"l":"pl.polsl.student.jakunow552.bestbankingoffer.view"}];updateSearchResults();

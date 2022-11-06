@@ -5,14 +5,23 @@
 package pl.polsl.student.jakunow552.bestbankingoffer.model;
 
 /**
- *
- * @author tryne
+ * Subcalss - represent credit offer of the bank
+ * (specifies type of the offer by using {@link CreditOffer#setOfferType} in the constructor).<p>
+ * Extends class: {@link BankingOffer}.<p>
+ * Methods added coresponds to specific prameters assigned to the credit offer.
+ * @version 1.0-FINAL
+ * @author Jakub Nowakowski
  */
 public class CreditOffer extends BankingOffer
 {
     
   
-    
+    /**
+     * Constructor initializes all parameters below and set offer type to "CREDIT".  
+     * @param bankName  bank name that have this offer.
+     * @param rateOfInterest  specific property for this class.
+     * @param serviceCharge  specific property for this class.
+     */
     public CreditOffer(String bankName, float rateOfInterest, float serviceCharge)
     {
         this.setOfferType("CREDIT");
@@ -22,6 +31,13 @@ public class CreditOffer extends BankingOffer
         this.setProperty("Service Charge", serviceCharge);
     }
     
+    /**
+     * Constructor initializes all parameters below and set offer type to "CREDIT". 
+     * @param bankName  bank name that have this offer.
+     * @param offerName name associated with this offer.
+     * @param rateOfInterest  specific property for this class.
+     * @param serviceCharge  specific property for this class.
+     */
     public CreditOffer(String bankName,String offerName, float rateOfInterest, float serviceCharge)
     {
         this.setOfferType("CREDIT");
@@ -31,38 +47,63 @@ public class CreditOffer extends BankingOffer
         this.setProperty("Service Charge", serviceCharge);
     }
     
+   /**
+     * This method gets rate of interest property value tied to {@link CreditOffer}.
+     * @return {@link float} value of rate of interest.
+     */
     public float getRateOfInterest()
     {
         return this.getPropertyValue("Rate of Interest");
     }
     
+    /**
+     * This method sets rate of interest property value tied to {@link CreditOffer}.
+     * @param rateOfInterest {@link float} value of rate of interest.
+     */
     public void setRateOfInterest(float rateOfInterest)
     {
         this.setProperty("Rate of Interest", rateOfInterest);
     }
     
+    /**
+     * This method gets service charge property value tied to {@link CreditOffer}.
+     * @return {@link float} value of service charge.
+     */
     public float getServiceCharge()
     {
         return this.getPropertyValue("Service Charge");
     }
     
+    /**
+     * This method sets service charge property value tied to {@link CreditOffer}.
+     * @param serviceCharge {@link float} value of service charge.
+     */
     public void setServiceCharge(float serviceCharge)
     {
         this.setProperty("Service Charge", serviceCharge);
     }   
     
-    
-     public CreditOffer compareOffers(CreditOffer offer)
+    /**
+     * This method compares credit offers and exepction is thrown when offer types do not mach.<p>
+     * Exception deatils: {@link TypeException}
+     * @param offer offer object to comapre.
+     * @return better {@link CreditOffer} . 
+     */
+    @Override
+     public BankingOffer compareOffers(BankingOffer offer)
      {    
-         if(offer.getRateOfInterest()*20000 + offer.getServiceCharge() > this.getRateOfInterest()*20000 + this.getServiceCharge() ){
+         checkTypeCoherence(this, offer);
+         CreditOffer creditOffer = (CreditOffer) offer;                
+         
+         if(creditOffer.getRateOfInterest()*20000 + creditOffer.getServiceCharge() > this.getRateOfInterest()*20000 + this.getServiceCharge() ){
              return this;
          }
          else{
-             return offer;
+             return (CreditOffer) offer;
          }
          
      }
      
-     
+    
     
 }
