@@ -23,9 +23,11 @@ import pl.polsl.student.jakunow552.bestbankingoffer.view.TextUserInterface;
  * @author Jakub Nowakowski
  */
 public class Controller {
-    
+    //List of parameters provided in the entry point.
     private ArrayList<String> params = new ArrayList<>();
+    // Text user interafce object
     private TextUserInterface tui = new TextUserInterface();
+    // List of offers that are stored.
     private ArrayList<BankingOffer> offersList = new ArrayList<>();
     
     /**

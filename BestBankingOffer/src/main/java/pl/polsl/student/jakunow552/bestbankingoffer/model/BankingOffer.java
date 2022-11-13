@@ -17,10 +17,16 @@ import java.util.HashMap;
  * @author Jakub Nowakowski
  */
 public abstract class BankingOffer {
+    //Name of the bank that offer is provided by
     private String bankName;
-    private String offerName;     
+    //Specyfic name of the offer
+    private String offerName; 
+    //Short desciption of the offer
     private String description; 
+    // Type of offer represented by string
     private String offerType;
+    //Hash map of all properties, name of property is key and represented by string
+    // value of the key (name of property) is represented by float
     private HashMap<String,Float> properties = new HashMap<String,Float>();
     
     /**

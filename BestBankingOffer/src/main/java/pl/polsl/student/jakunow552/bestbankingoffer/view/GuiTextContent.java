@@ -10,6 +10,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.view;
  * @author Jakub Nowakowski
  */
 public class GuiTextContent {
+    //Text content of the "General" tab
     private String general = 
             "Best banking offer app allows to directly compare banking offers of specific category:\n\n"
             + "- CREDIT\n"
@@ -18,7 +19,9 @@ public class GuiTextContent {
             + "Each of this categories contains different properties for example credit offer has\n "
             + "data about rate of intrest and service , personal account gives all fees that you pay\n"
             + "as a bank customer";
+    //Text content of the "Usage" tab
     private String usage;
+    //Text content of the "Console Arguments" tab
     private String consoleArgs;
     
     /**

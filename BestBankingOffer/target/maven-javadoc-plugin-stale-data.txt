@@ -20,11 +20,11 @@
 -docencoding
 'UTF-8'
 -doctitle
-'BestBankingOffer 1.4.7-PROTOTYPE API'
+'BestBankingOffer 1.0-FINAL API'
 -use
 -version
 -windowtitle
-'BestBankingOffer 1.4.7-PROTOTYPE API'
+'BestBankingOffer 1.0-FINAL API'
 pl.polsl.student.jakunow552.bestbankingoffer
 pl.polsl.student.jakunow552.bestbankingoffer.controller
 pl.polsl.student.jakunow552.bestbankingoffer.model
@@ -40,21 +40,21 @@ pl.polsl.student.jakunow552.bestbankingoffer.view
 'C:/Users/tryne/Documents/VoXelGDesign/BestBankingOffer/BestBankingOffer/src/main/java/pl/polsl/student/jakunow552/bestbankingoffer/view/TextUserInterface.java'
 C:\Users\tryne\.m2\repository\com\formdev\flatlaf\2.6\flatlaf-2.6.jar = 1666612633795
 C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\src\main\java = 1666587606710
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\allclasses-index.html = 1667759743450
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\allpackages-index.html = 1667759743452
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\element-list = 1667759743342
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\help-doc.html = 1667759743479
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\index-all.html = 1667759743470
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\index.html = 1667759743438
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\jquery-ui.overrides.css = 1667759743491
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\member-search-index.js = 1667759743455
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\module-search-index.js = 1667759743453
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\overview-summary.html = 1667759743476
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\overview-tree.html = 1667759743435
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\package-search-index.js = 1667759743453
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\script.js = 1667759743483
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\search.js = 1667759743484
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\serialized-form.html = 1667759743392
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\stylesheet.css = 1667759743482
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\tag-search-index.js = 1667759743456
-C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\type-search-index.js = 1667759743454
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\allclasses-index.html = 1668380944456
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\allpackages-index.html = 1668380944459
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\element-list = 1668380944329
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\help-doc.html = 1668380944484
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\index-all.html = 1668380944478
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\index.html = 1668380944445
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\jquery-ui.overrides.css = 1668380944500
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\member-search-index.js = 1668380944464
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\module-search-index.js = 1668380944460
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\overview-summary.html = 1668380944480
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\overview-tree.html = 1668380944442
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\package-search-index.js = 1668380944462
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\script.js = 1668380944487
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\search.js = 1668380944489
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\serialized-form.html = 1668380944395
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\stylesheet.css = 1668380944486
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\tag-search-index.js = 1668380944465
+C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\site\apidocs\type-search-index.js = 1668380944463
