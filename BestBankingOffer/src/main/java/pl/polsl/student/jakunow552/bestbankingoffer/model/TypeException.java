@@ -12,7 +12,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * @author Jakub Nowakowski
  */
 public class TypeException extends RuntimeException {
-    TypeException(String message){
-        super(message);
+    TypeException(){
+        super("\n"+"Type of offers differs!");
     }
 }

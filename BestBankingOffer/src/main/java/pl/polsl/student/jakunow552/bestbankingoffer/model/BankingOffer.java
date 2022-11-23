@@ -106,12 +106,19 @@ public abstract class BankingOffer {
     /**
      * Method add new property or modify existing one.
      * @param name {@link String} name of property.
-     * @param value {@link float} value of property.<p>
+     * @param value {@link float} value of property.
+     * @throws {@link NegativePropertyException} is thrown when value of property is less than zero<p>
      * If there is existing name of property same as provieded
      * value will be updated.
      */
-    public void setProperty(String name, float value){
+    public void setProperty(String name, float value) throws NegativePropertyException{
+         if(value < 0){
+              throw new NegativePropertyException(this.bankName);            
+        }
+        else{
         this.properties.put(name, value);
+        }
+         
     }
     
     /**
@@ -131,7 +138,7 @@ public abstract class BankingOffer {
       */
      public void checkTypeCoherence(BankingOffer a, BankingOffer b)throws TypeException{
          if(a.getOfferType() != b.getOfferType()){
-             throw new TypeException("\n"+"Type of offers differs!");
+             throw new TypeException();
          }
          
          

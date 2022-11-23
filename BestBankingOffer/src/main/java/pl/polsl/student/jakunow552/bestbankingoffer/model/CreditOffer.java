@@ -23,7 +23,7 @@ public class CreditOffer extends BankingOffer
      * @param serviceCharge  specific property for this class.
      */
     public CreditOffer(String bankName, float rateOfInterest, float serviceCharge)
-    {
+    {    
         this.setOfferType("CREDIT");
         this.setBankName(bankName);
         this.setOfferName("No name");
@@ -40,11 +40,13 @@ public class CreditOffer extends BankingOffer
      */
     public CreditOffer(String bankName,String offerName, float rateOfInterest, float serviceCharge)
     {
+
         this.setOfferType("CREDIT");
         this.setBankName(bankName);
         this.setOfferName(offerName);
         this.setProperty("Rate of Interest", rateOfInterest);
         this.setProperty("Service Charge", serviceCharge);
+
     }
     
    /**

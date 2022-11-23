@@ -67,6 +67,12 @@ public class Controller {
             tui.displayException(e);
         }
         
+        try{
+        offersList.get(1).setProperty("Rate of Interest", -1);
+        }
+        catch(Exception e){
+            tui.displayException(e);
+        }
         
         //Main initialization in respect to provided arguments 
          
