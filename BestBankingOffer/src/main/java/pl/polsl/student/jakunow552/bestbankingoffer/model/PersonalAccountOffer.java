@@ -13,14 +13,14 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * Methods added coresponds to specific prameters assigned to the personal
  * account offer.
  *
- * @version 1.0-FINAL
+ * @version 2.0-FINAL
  * @author Jakub Nowakowski
  */
 public class PersonalAccountOffer extends BankingOffer {
 
     /**
      * Constructor initializes all parameters below and set offer type to
-     * "PERSONAL".
+     * {@link OfferType} - PERSONAL.
      *
      * @param bankName bank name that have this offer.
      * @param interest specific property for this class.
@@ -36,7 +36,7 @@ public class PersonalAccountOffer extends BankingOffer {
 
     /**
      * Constructor initializes all parameters below and set offer type to
-     * "PERSONAL".
+     * {@link OfferType} - PERSONAL.
      *
      * @param bankName bank name that have this offer.
      * @param offerName name associated with this offer.
@@ -97,15 +97,18 @@ public class PersonalAccountOffer extends BankingOffer {
      * Exception deatils: {@link TypeException}
      *
      * @param offer offer object to comapre.
-     * @return better {@link PersonalAccountOffer} .
+     * @return better {@link PersonalAccountOffer} or if offers are the same -
+     * null .
      */
     @Override
     public BankingOffer compareOffers(BankingOffer offer) {
         checkTypeCoherence(this, offer);
         PersonalAccountOffer personalAccOffer = (PersonalAccountOffer) offer;
-
-        if (personalAccOffer.getInterest() * 1.5 + personalAccOffer.getMonthlyFee() > this.getInterest() * 1.5 + this.getMonthlyFee()) {
+        // 6480 - average monthly salary in poland
+        if (personalAccOffer.getInterest() * 6480 + personalAccOffer.getMonthlyFee() > this.getInterest() * 6480 + this.getMonthlyFee()) {
             return this;
+        } else if (personalAccOffer.getInterest() * 6480 + personalAccOffer.getMonthlyFee() == this.getInterest() * 6480 + this.getMonthlyFee()) {
+            return null;
         } else {
             return (PersonalAccountOffer) offer;
         }

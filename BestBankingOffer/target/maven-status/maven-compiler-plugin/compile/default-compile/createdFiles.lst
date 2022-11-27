@@ -4,6 +4,7 @@ pl\polsl\student\jakunow552\bestbankingoffer\model\BankingOffer.class
 pl\polsl\student\jakunow552\bestbankingoffer\model\PersonalAccountOffer.class
 pl\polsl\student\jakunow552\bestbankingoffer\model\CreditOffer.class
 pl\polsl\student\jakunow552\bestbankingoffer\view\GraphicalUserInterface$2.class
+pl\polsl\student\jakunow552\bestbankingoffer\model\BankingOffer$OfferType.class
 pl\polsl\student\jakunow552\bestbankingoffer\controller\Controller.class
 pl\polsl\student\jakunow552\bestbankingoffer\view\GraphicalUserInterface$3.class
 pl\polsl\student\jakunow552\bestbankingoffer\view\GraphicalUserInterface.class

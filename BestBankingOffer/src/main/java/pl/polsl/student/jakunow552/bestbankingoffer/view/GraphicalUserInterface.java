@@ -17,7 +17,7 @@ import pl.polsl.student.jakunow552.bestbankingoffer.model.BankingOffer.OfferType
  * Class handle listening to events and updates view accordingly, based on
  * uploaded data from main controller.
  *
- * @version 1.0-FINAL
+ * @version 2.0-FINAL
  * @author Jakub Nowakowski
  */
 public class GraphicalUserInterface extends javax.swing.JFrame {
@@ -26,7 +26,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     private GuiTextContent Text = new GuiTextContent();
     // List of offers that will be provided by the main controller and displayed
     private ArrayList<BankingOffer> offersList = new ArrayList<>();
-    
+
     /**
      * Construtor initializes all elements in the view.
      */
@@ -56,13 +56,12 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jScrollPane8 = new javax.swing.JScrollPane();
         jList3 = new javax.swing.JList<>();
         jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList<>();
         jInternalFrame5 = new javax.swing.JInternalFrame();
         jSeparator1 = new javax.swing.JSeparator();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -93,7 +92,9 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         setTitle("Best Banking Offer");
         setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         setIconImages(null);
-        setMinimumSize(new java.awt.Dimension(980, 710));
+        setMaximumSize(new java.awt.Dimension(980, 717));
+        setMinimumSize(new java.awt.Dimension(980, 717));
+        setResizable(false);
 
         jInternalFrame7.setBorder(null);
         jInternalFrame7.setVisible(true);
@@ -101,12 +102,16 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 3));
 
         jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 3));
-        jPanel17.setPreferredSize(new java.awt.Dimension(464, 130));
+        jPanel17.setPreferredSize(new java.awt.Dimension(464, 423));
 
         jScrollPane7.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         jList2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jList2.setEnabled(false);
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "No Offers Found..." };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jList2.setFocusable(false);
         jList2.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
         jScrollPane7.setViewportView(jList2);
@@ -134,24 +139,28 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(77, 77, 77))
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Credit Offers", jPanel7);
 
         jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 3));
-        jPanel14.setPreferredSize(new java.awt.Dimension(464, 130));
+        jPanel14.setPreferredSize(new java.awt.Dimension(464, 423));
 
         jList3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jList3.setEnabled(false);
+        jList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "No Offers Found..." };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         jList3.setFocusable(false);
         jList3.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
         jScrollPane8.setViewportView(jList3);
@@ -179,36 +188,42 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(77, 77, 77))
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Personal Account Offers", jPanel8);
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 3));
+        jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 3));
 
         jList4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jList4.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "No Offers Found..." };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jList4.setFocusable(false);
         jScrollPane9.setViewportView(jList4);
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
                 .addContainerGap())
@@ -220,15 +235,15 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(66, 66, 66))
         );
 
         jTabbedPane1.addTab("Savings Account Offers", jPanel9);
@@ -262,9 +277,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        jButton2.setText("jButton2");
-        jButton2.setFocusable(false);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51), 5));
         jPanel1.setMinimumSize(new java.awt.Dimension(400, 370));
@@ -405,7 +417,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
                 .addGap(34, 34, 34))
         );
 
@@ -456,7 +468,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -472,11 +484,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame5Layout.createSequentialGroup()
                         .addGap(858, 858, 858)
-                        .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jInternalFrame5Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(37, 37, 37))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame5Layout.createSequentialGroup()
                         .addComponent(jSeparator1)
@@ -492,15 +500,13 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 483, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(54, 54, 54))
+                .addGap(97, 97, 97))
         );
 
         jTabbedPane2.addTab("Compare", jInternalFrame5);
@@ -548,7 +554,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jInternalFrame6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 629, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
                     .addComponent(jScrollPane2))
                 .addContainerGap())
         );
@@ -573,7 +579,8 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * Method uploads list of offers to this class and updates combo boxes.
+     * Method uploads list of offers to this class and updates combo boxes with
+     * lists.
      *
      * @param listOfOffers offers to upload.
      */
@@ -588,23 +595,30 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jComboBox1.addItem("| " + offerType + " | " + offer.getOfferName());
             jComboBox2.addItem("| " + offerType + " | " + offer.getOfferName());
         }
-        Stream<BankingOffer> offersStream = offersList.stream();       
-        updateTopList(offersStream, OfferType.CREDIT, jList2); 
-        
-        offersStream = offersList.stream();
+        Stream<BankingOffer> offersStream = offersList.stream();
         updateTopList(offersStream, OfferType.PERSONAL, jList3);
-        
+        // offers list is streamed again because you cannot do more than one operation on one stream
+        offersStream = offersList.stream();
+        updateTopList(offersStream, OfferType.CREDIT, jList2);
+
         //offersStream = offersList.stream();
         //updateTopList(offersStream, OfferType.SAVINGS, jList3); <- savings offers will be implemented
     }
-    
-    private void updateTopList(Stream<BankingOffer> stream, OfferType type, javax.swing.JList<String> list){
+
+    /**
+     * Method creates list model based on filtered stream of
+     * {@link BankingOffer} and sets this model for specified list
+     *
+     * @param stream stream of {@link BankingOffer} to be filtered and uploaded
+     * @param type type of offers to be uploaded
+     * @param list list to upload offers
+     */
+    private void updateTopList(Stream<BankingOffer> stream, OfferType type, javax.swing.JList<String> list) {
         DefaultListModel model = new DefaultListModel();
         //ArrayList<BankingOffer> offers = stream.filter(o -> type == o.getOfferType()).collect(Collectors.toCollection(ArrayList::new));
         // will be sorted ^
-        stream.filter(o -> type == o.getOfferType()).forEach(o -> model.addElement(o.getOfferName()));
+        stream.filter(o -> type == o.getOfferType()).forEach(o -> model.addElement("#" + (model.size() + 1) + " " + o.getOfferName()));
         list.setModel(model);
-        list.updateUI();
     }
 
     /**
@@ -661,7 +675,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
      * @param evt button event listner.
      */
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
-       
+
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     /**
@@ -686,7 +700,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     // All elements of graphical user interface generated by Form Editor
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JInternalFrame jInternalFrame5;
@@ -701,7 +714,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;

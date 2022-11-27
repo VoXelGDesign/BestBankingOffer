@@ -16,16 +16,11 @@ import java.util.HashMap;
  * <p>
  * {@link BankingOffer#properties} - hash map with property {@link String} name
  * as a key and {@link float} value.<p>
- * @version 1.0-FINAL
+ * @version 2.0-FINAL
  * @author Jakub Nowakowski
  */
 public abstract class BankingOffer {
 
-    public enum OfferType {
-        CREDIT,
-        PERSONAL,
-        SAVINGS
-    }
     //Name of the bank that offer is provided by
     private String bankName;
     //Specyfic name of the offer
@@ -37,6 +32,15 @@ public abstract class BankingOffer {
     //Hash map of all properties, name of property is key and represented by string
     // value of the key (name of property) is represented by float
     private HashMap<String, Float> properties = new HashMap<String, Float>();
+
+    /**
+     * Enum that provides offer types
+     */
+    public enum OfferType {
+        CREDIT,
+        PERSONAL,
+        SAVINGS
+    }
 
     /**
      * Sets offer type provied by method argument. used only in subcalss

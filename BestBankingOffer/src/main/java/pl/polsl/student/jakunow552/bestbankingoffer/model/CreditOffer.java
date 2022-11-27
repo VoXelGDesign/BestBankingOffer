@@ -12,14 +12,14 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * .<p>
  * Methods added coresponds to specific prameters assigned to the credit offer.
  *
- * @version 1.0-FINAL
+ * @version 2.0-FINAL
  * @author Jakub Nowakowski
  */
 public class CreditOffer extends BankingOffer {
 
     /**
      * Constructor initializes all parameters below and set offer type to
-     * "CREDIT".
+     * {@link OfferType} - CREDIT.
      *
      * @param bankName bank name that have this offer.
      * @param rateOfInterest specific property for this class.
@@ -35,7 +35,7 @@ public class CreditOffer extends BankingOffer {
 
     /**
      * Constructor initializes all parameters below and set offer type to
-     * "CREDIT".
+     * {@link OfferType} - CREDIT.
      *
      * @param bankName bank name that have this offer.
      * @param offerName name associated with this offer.
@@ -98,15 +98,17 @@ public class CreditOffer extends BankingOffer {
      * Exception deatils: {@link TypeException}
      *
      * @param offer offer object to comapre.
-     * @return better {@link CreditOffer} .
+     * @return better {@link CreditOffer} or if offers are the same - null .
      */
     @Override
     public BankingOffer compareOffers(BankingOffer offer) {
         checkTypeCoherence(this, offer);
         CreditOffer creditOffer = (CreditOffer) offer;
-
-        if (creditOffer.getRateOfInterest() * 20000 + creditOffer.getServiceCharge() > this.getRateOfInterest() * 20000 + this.getServiceCharge()) {
+        //28000 - average debt in poland
+        if (creditOffer.getRateOfInterest() * 28000 + creditOffer.getServiceCharge() > this.getRateOfInterest() * 28000 + this.getServiceCharge()) {
             return this;
+        } else if (creditOffer.getRateOfInterest() * 28000 + creditOffer.getServiceCharge() == this.getRateOfInterest() * 28000 + this.getServiceCharge()) {
+            return null;
         } else {
             return (CreditOffer) offer;
         }

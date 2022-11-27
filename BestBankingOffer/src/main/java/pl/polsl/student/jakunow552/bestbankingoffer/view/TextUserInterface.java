@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Text user interface class, this class is used for program interaction with
  * console.
  *
- * @version 1.0-FINAL
+ * @version 2.0-FINAL
  * @author Jakub Nowakowski
  */
 public class TextUserInterface {
