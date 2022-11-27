@@ -9,7 +9,8 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * @author tryne
  */
 public class NegativePropertyException extends RuntimeException {
-    NegativePropertyException(String bankName){
-        super("\n"+bankName +" offer has a negative property value");
+
+    NegativePropertyException(String bankName) {
+        super("\n" + bankName + " offer has a negative property value");
     }
 }
