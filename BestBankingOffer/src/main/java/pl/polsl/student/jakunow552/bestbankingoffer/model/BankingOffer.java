@@ -137,14 +137,12 @@ public abstract class BankingOffer {
     }
 
     /**
-     * Method add new property or modify existing one.
-     *
-     * @param name {@link String} name of property.
-     * @param value {@link float} value of property.
-     * @throws {@link NegativePropertyException} is thrown when value of
-     * property is less than zero<p>
+     * Method add new property or modify existing one.<p>
      * If there is existing name of property same as provieded value will be
      * updated.
+     * 
+     * @param name {@link String} name of property.
+     * @param value {@link float} value of property.
      */
     public void setProperty(String name, float value) throws NegativePropertyException {
         if (value < 0) {

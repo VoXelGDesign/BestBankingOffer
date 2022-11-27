@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.093" tests="33" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.096" tests="33" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="PL"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.5\bin"/>
-    <property name="sun.java.command" value="C:\Users\tryne\AppData\Local\Temp\surefire11742129332938218309\surefirebooter5778235631427012192.jar C:\Users\tryne\AppData\Local\Temp\surefire11742129332938218309 2022-11-27T19-25-12_693-jvmRun1 surefire11966300679323697931tmp surefire_011842950484876622544tmp"/>
+    <property name="sun.java.command" value="C:\Users\tryne\AppData\Local\Temp\surefire3963696593594101148\surefirebooter14993718004194215857.jar C:\Users\tryne\AppData\Local\Temp\surefire3963696593594101148 2022-11-27T19-34-00_672-jvmRun1 surefire5221456956049865989tmp surefire_05306302923252922703tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\test-classes;C:\Users\tryne\Documents\VoXelGDesign\BestBankingOffer\BestBankingOffer\target\classes;C:\Users\tryne\.m2\repository\com\formdev\flatlaf\2.6\flatlaf-2.6.jar;C:\Users\tryne\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.1\junit-jupiter-5.9.1.jar;C:\Users\tryne\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\tryne\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\tryne\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\tryne\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tryne\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.1\junit-jupiter-params-5.9.1.jar;C:\Users\tryne\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\tryne\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\tryne\AppData\Local\Temp\surefire11742129332938218309\surefirebooter5778235631427012192.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\tryne\AppData\Local\Temp\surefire3963696593594101148\surefirebooter14993718004194215857.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.5+9-LTS-191"/>
@@ -57,24 +57,24 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="checkIfComapringDifferentTypeOffersThrowsException{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.025"/>
-  <testcase name="checkIfComapringDifferentTypeOffersThrowsException{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
+  <testcase name="checkIfComapringDifferentTypeOffersThrowsException{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.026"/>
+  <testcase name="checkIfComapringDifferentTypeOffersThrowsException{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
   <testcase name="checkIfComapringDifferentTypeOffersThrowsException{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
-  <testcase name="personalOfferClassCompareMethodTestIfEquals{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.002"/>
-  <testcase name="personalOfferClassCompareMethodTestIfEquals{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
+  <testcase name="personalOfferClassCompareMethodTestIfEquals{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
+  <testcase name="personalOfferClassCompareMethodTestIfEquals{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="personalOfferClassCompareMethodTestIfEquals{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
   <testcase name="checkIfNormalCreditPropertiesDoesNotThrowExceptionTest{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.002"/>
-  <testcase name="checkIfNormalCreditPropertiesDoesNotThrowExceptionTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
-  <testcase name="checkIfNormalCreditPropertiesDoesNotThrowExceptionTest{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
+  <testcase name="checkIfNormalCreditPropertiesDoesNotThrowExceptionTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
+  <testcase name="checkIfNormalCreditPropertiesDoesNotThrowExceptionTest{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="checkIfNormalCreditPropertiesDoesNotThrowExceptionTest{float}[4]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="checkIfNormalCreditPropertiesDoesNotThrowExceptionTest{float}[5]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="checkIfNormalPersonalAccountPropertiesDoesNotThrowExceptionTest{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
-  <testcase name="checkIfNormalPersonalAccountPropertiesDoesNotThrowExceptionTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
-  <testcase name="checkIfNormalPersonalAccountPropertiesDoesNotThrowExceptionTest{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
+  <testcase name="checkIfNormalPersonalAccountPropertiesDoesNotThrowExceptionTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
+  <testcase name="checkIfNormalPersonalAccountPropertiesDoesNotThrowExceptionTest{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="checkIfNormalPersonalAccountPropertiesDoesNotThrowExceptionTest{float}[4]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="checkIfNormalPersonalAccountPropertiesDoesNotThrowExceptionTest{float}[5]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="checkIfnegativeCreditPropertiesThrowsExceptionTest{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.004"/>
-  <testcase name="checkIfnegativeCreditPropertiesThrowsExceptionTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
+  <testcase name="checkIfnegativeCreditPropertiesThrowsExceptionTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.004"/>
   <testcase name="checkIfnegativeCreditPropertiesThrowsExceptionTest{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="checkIfnegativeCreditPropertiesThrowsExceptionTest{float}[4]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
   <testcase name="checkIfNegativePersonalAccountPropertiesThrowsExceptionTest{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
@@ -84,7 +84,7 @@
   <testcase name="creditOfferClassCompareMethodTest{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
   <testcase name="creditOfferClassCompareMethodTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="creditOfferClassCompareMethodTest{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
-  <testcase name="personalOfferClassCompareMethodTest{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0.001"/>
+  <testcase name="personalOfferClassCompareMethodTest{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="personalOfferClassCompareMethodTest{float}[2]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="personalOfferClassCompareMethodTest{float}[3]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
   <testcase name="creditOfferClassCompareMethodTestIfEquals{float}[1]" classname="pl.polsl.student.jakunow552.bestbankingoffer.JUnitTest" time="0"/>
