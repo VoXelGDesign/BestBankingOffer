@@ -422,7 +422,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTextPane2);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 40)); // NOI18N
-        jLabel1.setForeground(javax.swing.UIManager.getDefaults().getColor("Objects.Purple"));
         jLabel1.setText("jLabel1");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -521,7 +520,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jPanel4.setPreferredSize(new java.awt.Dimension(262, 128));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 40)); // NOI18N
-        jLabel3.setForeground(javax.swing.UIManager.getDefaults().getColor("Objects.Purple"));
         jLabel3.setText("jLabel3");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -549,6 +547,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
         jScrollPane6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(70, 73, 75), 25, true));
 
+        jTextPane5.setCaret(null);
         jTextPane5.setFocusable(false);
         jScrollPane6.setViewportView(jTextPane5);
 
@@ -606,14 +605,12 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(jInternalFrame5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame5Layout.createSequentialGroup()
-                        .addComponent(jSeparator1)
-                        .addContainerGap())
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jInternalFrame5Layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)))
+                .addContainerGap())
             .addGroup(jInternalFrame5Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
