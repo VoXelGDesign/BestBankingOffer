@@ -703,7 +703,12 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    public void displayException(Exception e){
+         jLabel7.setText(e.getMessage());
+            jDialog1.setLocationRelativeTo(this);
+            jDialog1.setVisible(true);
+    }
     /**
      * Method uploads list of offers to this class and updates combo boxes with
      * lists.
@@ -787,9 +792,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jDialog2.setVisible(true);
         }
         catch(Exception e){           
-            jLabel7.setText(e.getMessage());
-            jDialog1.setLocationRelativeTo(this);
-            jDialog1.setVisible(true);
+           displayException(e);
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
