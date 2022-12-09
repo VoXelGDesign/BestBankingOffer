@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>pl.polsl.student.jakunow552</groupId>
     <artifactId>BestBankingOffer</artifactId>
-    <version>3.1-PROTOTYPE</version>
+    <version>3.5-PROTOTYPE</version>
     <packaging>jar</packaging>
     <build>
         <plugins>

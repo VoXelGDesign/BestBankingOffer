@@ -24,10 +24,38 @@ public class GuiTextContent {
               
             Each of this categories contains different properties for example credit offer has
             data about rate of intrest and service , personal account gives all fees that you pay
-            as a bank customer
+            as a bank customer.
+              
+            An app compares banking offers is a type of application that allows users to easily compare different banking products, 
+            from different financial institutions. This app provide detailed information about the offers, such as interest rates,
+            fees, and allow users to compare the offers side by side to help them choose the best one for their needs.
+            
+            App also provide rankings or ratings of the offers, based on factors such as overall attractiveness, or other criteria.
+            This can help users quickly identify the best offers and make an informed decision about which one to choose.
             """;
     //Text content of the "Usage" tab
-    private String usage;
+    private String usage
+            ="""
+             To use an app that allows you to compare banking offers, you can follow these steps:
+             
+             1. Select the option to compare banking offers.
+             
+             2. Choose the type of banking product you are interested in from the available options.
+             
+             3. Select the offers you want to compare from the list of available options.
+             
+             4.Once you have  all the offers you want to compare,
+             tap on the "Compare" button to see the comparison results.
+             
+             3. The app will display a comparison of the offers you selected,
+             including details such as interest rates and other important conditions.
+             
+             4. The app may also display a ranking of the offers based on their overall attractiveness, 
+             with the best offers at the top of the list.
+             You can use the comparison and ranking information to help you choose the best offer for your needs.
+             
+             5. You can explore the app's features to see what options are available.
+             """;
     //Text content of the "Console Arguments" tab
     private String consoleArgs
             = """

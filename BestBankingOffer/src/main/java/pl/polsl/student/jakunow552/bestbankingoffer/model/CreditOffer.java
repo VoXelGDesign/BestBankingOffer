@@ -53,6 +53,26 @@ public class CreditOffer extends BankingOffer {
     }
 
     /**
+     * Constructor initializes all parameters below and set offer type to
+     * {@link OfferType} - CREDIT.
+     *
+     * @param bankName bank name that have this offer.
+     * @param offerName name associated with this offer.
+     * @param rateOfInterest specific property for this class.
+     * @param serviceCharge specific property for this class.
+     * @param description offer description.
+     */
+    public CreditOffer(String bankName, String offerName, float rateOfInterest, float serviceCharge, String description) {
+
+        this.setOfferType(OfferType.CREDIT);
+        this.setBankName(bankName);
+        this.setOfferName(offerName);
+        this.setProperty("Rate of Interest", rateOfInterest);
+        this.setProperty("Service Charge", serviceCharge);
+        this.setDescription(description);
+    }
+
+    /**
      * This method gets rate of interest property value tied to
      * {@link CreditOffer}.
      *

@@ -4,13 +4,15 @@
  */
 package pl.polsl.student.jakunow552.bestbankingoffer.view;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import pl.polsl.student.jakunow552.bestbankingoffer.model.BankingOffer;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.swing.DefaultListModel;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import pl.polsl.student.jakunow552.bestbankingoffer.model.BankingOffer.OfferType;
 
 /**
@@ -33,7 +35,8 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
      * Construtor initializes all elements in the view.
      */
     public GraphicalUserInterface() {
-        initComponents();            
+        initComponents();
+
     }
 
     /**
@@ -54,6 +57,10 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jFrame1 = new javax.swing.JFrame();
+        jPanel13 = new javax.swing.JPanel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jInternalFrame7 = new javax.swing.JInternalFrame();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -69,6 +76,10 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jScrollPane9 = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList<>();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
         jInternalFrame5 = new javax.swing.JInternalFrame();
         jSeparator1 = new javax.swing.JSeparator();
         jButton1 = new javax.swing.JButton();
@@ -213,6 +224,52 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jFrame1.setTitle("All Offers");
+        jFrame1.setMinimumSize(new java.awt.Dimension(536, 400));
+        jFrame1.setResizable(false);
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jTree1.setFocusable(false);
+        jTree1.setMaximumSize(new java.awt.Dimension(512, 369));
+        jTree1.setMinimumSize(new java.awt.Dimension(512, 369));
+        jTree1.setPreferredSize(new java.awt.Dimension(512, 369));
+        jScrollPane10.setViewportView(jTree1);
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrame1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrame1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Best Banking Offer");
         setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
@@ -251,7 +308,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -262,14 +319,14 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Credit Offers", jPanel7);
@@ -301,7 +358,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -312,14 +369,14 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Personal Account Offers", jPanel8);
@@ -348,7 +405,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 417, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 440, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -359,39 +416,73 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
-                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(66, 66, 66))
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Savings Account Offers", jPanel9);
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
+        jLabel8.setText("Best ");
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
+        jLabel9.setText("Banking");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 72)); // NOI18N
+        jLabel10.setText("Offer");
+
+        jButton4.setText("All Offers");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrame7Layout = new javax.swing.GroupLayout(jInternalFrame7.getContentPane());
         jInternalFrame7.getContentPane().setLayout(jInternalFrame7Layout);
         jInternalFrame7Layout.setHorizontalGroup(
             jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame7Layout.createSequentialGroup()
-                .addGap(178, 178, 178)
+                .addGap(44, 44, 44)
                 .addComponent(jTabbedPane1)
-                .addGap(178, 178, 178))
+                .addGap(100, 100, 100)
+                .addGroup(jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addGroup(jInternalFrame7Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(112, 112, 112))
         );
         jInternalFrame7Layout.setVerticalGroup(
-            jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jInternalFrame7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jInternalFrame7Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(32, 32, 32)
                 .addComponent(jTabbedPane1)
-                .addGap(61, 61, 61))
+                .addContainerGap())
+            .addGroup(jInternalFrame7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
         );
 
         jTabbedPane2.addTab("Ranking", jInternalFrame7);
 
         jInternalFrame5.setBorder(null);
-        jInternalFrame5.setIconifiable(true);
         jInternalFrame5.setVisible(true);
 
         jButton1.setText("Compare");
@@ -442,7 +533,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -481,7 +572,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, 466, Short.MAX_VALUE))
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
@@ -499,8 +590,8 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         jPanel5.setMinimumSize(new java.awt.Dimension(400, 370));
@@ -532,17 +623,17 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jScrollPane6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(70, 73, 75), 25, true));
@@ -557,7 +648,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -591,11 +682,11 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout jInternalFrame5Layout = new javax.swing.GroupLayout(jInternalFrame5.getContentPane());
@@ -607,9 +698,9 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jInternalFrame5Layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)))
+                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jInternalFrame5Layout.createSequentialGroup()
                 .addGap(417, 417, 417)
@@ -650,6 +741,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jScrollPane1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(70, 73, 75), 25, true));
 
         jList1.setBorder(null);
+        jList1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "General", "Usage", "Console arguments" };
             public int getSize() { return strings.length; }
@@ -672,7 +764,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 756, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jInternalFrame6Layout.setVerticalGroup(
@@ -703,12 +795,17 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    public void displayException(Exception e){
-         jLabel7.setText(e.getMessage());
-            jDialog1.setLocationRelativeTo(this);
-            jDialog1.setVisible(true);
+    /**
+     * Method dispalys exeption message in gui using dialog window.
+     *
+     * @param e exepction to be displayed
+     */
+    public void displayException(Exception e) {
+        jLabel7.setText(e.getMessage());
+        jDialog1.setLocationRelativeTo(this);
+        jDialog1.setVisible(true);
     }
+
     /**
      * Method uploads list of offers to this class and updates combo boxes with
      * lists.
@@ -726,6 +823,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
             jComboBox1.addItem("| " + offerType + " | " + offer.getOfferName());
             jComboBox2.addItem("| " + offerType + " | " + offer.getOfferName());
         }
+
         Stream<BankingOffer> offersStream = offersList.stream();
         updateTopList(offersStream, OfferType.PERSONAL, jList3);
         // offers list is streamed again because you cannot do more than one operation on one stream
@@ -734,11 +832,14 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
 
         //offersStream = offersList.stream();
         //updateTopList(offersStream, OfferType.SAVINGS, jList3); <- savings offers will be implemented
+        // tree inicialization
+        treeInit();
     }
 
     /**
      * Method creates list model based on filtered stream of
-     * {@link BankingOffer} and sets this model for specified list
+     * {@link BankingOffer}, sorts elements of filtered stream and sets this
+     * model for specified list
      *
      * @param stream stream of {@link BankingOffer} to be filtered and uploaded
      * @param type type of offers to be uploaded
@@ -746,10 +847,51 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
      */
     private void updateTopList(Stream<BankingOffer> stream, OfferType type, javax.swing.JList<String> list) {
         DefaultListModel model = new DefaultListModel();
-        //ArrayList<BankingOffer> offers = stream.filter(o -> type == o.getOfferType()).collect(Collectors.toCollection(ArrayList::new));
-        // will be sorted ^
-        stream.filter(o -> type == o.getOfferType()).forEach(o -> model.addElement("#" + (model.size() + 1) + " " + o.getOfferName()));
+        //Creating new array with specified type
+        ArrayList<BankingOffer> offers = stream.filter(o -> type == o.getOfferType()).collect(Collectors.toCollection(ArrayList::new));
+
+        //Sorting 
+        Collections.sort(offers, new Comparator<BankingOffer>() {
+            public int compare(BankingOffer a, BankingOffer b) {
+                if (a.compareOffers(b) == a) {
+                    return -1;
+                } else if (a.compareOffers(b) == null) {
+                    return 0;
+                } else {
+                    return 1;
+                }
+            }
+        });
+
+        //stream cannot be used , offers order must be preserved (they are sorted!)
+        for (int i = 0; i < offers.size(); i++) {
+            model.addElement("#" + (i + 1) + " " + offers.get(i).getOfferName());
+        }
         list.setModel(model);
+    }
+
+    /**
+     * Method inzialize tree control,
+     * adds offer types as child nodes to root
+     * and coresponding offers name as child nodes to offer types
+     */
+    private void treeInit() {
+        //Clears the tree
+        jTree1.removeAll();
+        //Gets tree model from design component
+        DefaultTreeModel model = (DefaultTreeModel) jTree1.getModel();
+        //Sets root as node named "Offers"
+        model.setRoot(new DefaultMutableTreeNode("Offers"));
+        //Gets root and adds childs nodes acorrdingly to the type of offer
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
+        for (OfferType type : OfferType.values()) {
+            var newChild = new DefaultMutableTreeNode(type.toString());
+            root.add(newChild);
+            Stream<BankingOffer> stream = offersList.stream();
+            stream.filter(o -> o.getOfferType() == type).forEach(o -> newChild.add(new DefaultMutableTreeNode(o.getOfferName())));
+        }
+        //Updates tree with created model
+        jTree1.setModel(model);
     }
 
     /**
@@ -773,28 +915,32 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jList1ValueChanged
     /**
-     * Empty method, in future will be responsible for button click
+     * Method dispalys result of offers comapre
+     * Offers are the same type - displays better one
+     * <p>
+     * Offers are different type - chatches exepction and informs that comapre
+     * is imposible<p>
+     * Offers property values the same - displays information that offers are
+     * the same.
      *
      * @param evt button event listner.
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int index1 = jComboBox1.getSelectedIndex();
         int index2 = jComboBox2.getSelectedIndex();
-        try{
-        var betterOffer = offersList.get(index1).compareOffers(offersList.get(index2));
-        if(betterOffer != null){
-        jLabel6.setText(betterOffer.getOfferName());      
+        try {
+            var betterOffer = offersList.get(index1).compareOffers(offersList.get(index2));
+            if (betterOffer != null) {
+                jLabel6.setText(betterOffer.getOfferName());
+            } else {
+                jLabel6.setText("Offers are the same...");
+            }
+            jDialog2.setLocationRelativeTo(this);
+            jDialog2.setVisible(true);
+        } catch (Exception e) {
+            displayException(e);
         }
-        else{
-            jLabel6.setText("Offers are the same...");
-        }
-        jDialog2.setLocationRelativeTo(this);
-        jDialog2.setVisible(true);
-        }
-        catch(Exception e){           
-           displayException(e);
-        }
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
     /**
      * Method listen to change in combo box and displays content accordingly to
@@ -816,7 +962,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
-     * Empty method
+     * Method dispose dialog window.
      *
      * @param evt button event listner.
      */
@@ -853,25 +999,37 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
         jDialog1.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        jFrame1.setVisible(true);
+        jFrame1.setLocationRelativeTo(this);
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     // All elements of graphical user interface generated by Form Editor
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JInternalFrame jInternalFrame5;
     private javax.swing.JInternalFrame jInternalFrame6;
     private javax.swing.JInternalFrame jInternalFrame7;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
@@ -880,6 +1038,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
@@ -891,6 +1050,7 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -907,5 +1067,6 @@ public class GraphicalUserInterface extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
     private javax.swing.JTextPane jTextPane5;
+    private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 }

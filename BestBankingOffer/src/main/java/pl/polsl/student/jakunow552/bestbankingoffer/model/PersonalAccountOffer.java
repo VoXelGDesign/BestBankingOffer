@@ -52,6 +52,25 @@ public class PersonalAccountOffer extends BankingOffer {
     }
 
     /**
+     * Constructor initializes all parameters below and set offer type to
+     * {@link OfferType} - PERSONAL.
+     *
+     * @param bankName bank name that have this offer.
+     * @param offerName name associated with this offer.
+     * @param interest specific property for this class.
+     * @param monthlyFee specific property for this class.
+     * @param description offer descripton.
+     */
+    public PersonalAccountOffer(String bankName, String offerName, float interest, float monthlyFee, String description) {
+        this.setOfferType(OfferType.PERSONAL);
+        this.setBankName(bankName);
+        this.setOfferName(offerName);
+        this.setProperty("Interest", interest);
+        this.setProperty("Monthly Fee", monthlyFee);
+        this.setDescription(description);
+    }
+
+    /**
      * This method gets interest property value tied to
      * {@link PersonalAccountOffer}.
      *
@@ -105,7 +124,7 @@ public class PersonalAccountOffer extends BankingOffer {
         checkTypeCoherence(this, offer);
         PersonalAccountOffer personalAccOffer = (PersonalAccountOffer) offer;
         // 6480 - average monthly salary in poland
-        if (personalAccOffer.getInterest() * 6480 + personalAccOffer.getMonthlyFee() > this.getInterest() * 6480 + this.getMonthlyFee()) {
+        if (personalAccOffer.getInterest() * 6480 + personalAccOffer.getMonthlyFee() < this.getInterest() * 6480 + this.getMonthlyFee()) {
             return this;
         } else if (personalAccOffer.getInterest() * 6480 + personalAccOffer.getMonthlyFee() == this.getInterest() * 6480 + this.getMonthlyFee()) {
             return null;
