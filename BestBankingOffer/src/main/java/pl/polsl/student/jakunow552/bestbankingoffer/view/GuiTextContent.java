@@ -8,7 +8,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.view;
  * Graphical user interface text content class, this class store text that is
  * always displayed.
  *
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public class GuiTextContent {
@@ -35,7 +35,7 @@ public class GuiTextContent {
             """;
     //Text content of the "Usage" tab
     private String usage
-            ="""
+            = """
              To use an app that allows you to compare banking offers, you can follow these steps:
              
              1. Select the option to compare banking offers.

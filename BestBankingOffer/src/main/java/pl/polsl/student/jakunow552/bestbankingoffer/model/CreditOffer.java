@@ -12,7 +12,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * .<p>
  * Methods added coresponds to specific prameters assigned to the credit offer.
  *
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public class CreditOffer extends BankingOffer {

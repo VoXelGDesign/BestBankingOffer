@@ -16,7 +16,7 @@ import java.util.HashMap;
  * <p>
  * {@link BankingOffer#properties} - hash map with property {@link String} name
  * as a key and {@link float} value.<p>
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public abstract class BankingOffer {
@@ -140,7 +140,7 @@ public abstract class BankingOffer {
      * Method add new property or modify existing one.<p>
      * If there is existing name of property same as provieded value will be
      * updated.
-     * 
+     *
      * @param name {@link String} name of property.
      * @param value {@link float} value of property.
      */
@@ -176,7 +176,5 @@ public abstract class BankingOffer {
         }
 
     }
-    
-   
 
 }

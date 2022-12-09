@@ -12,7 +12,7 @@ import pl.polsl.student.jakunow552.bestbankingoffer.controller.Controller;
  * creates controller with args passed to the constructor.
  * Uses method "start" to initialize controller.
  *
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public class BestBankingOffer {

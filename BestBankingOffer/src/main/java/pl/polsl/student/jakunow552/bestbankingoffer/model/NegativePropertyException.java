@@ -10,7 +10,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * If exception is thrown, class property has negative value.<p>
  * Program do not allow to input negative properties.
  *
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public class NegativePropertyException extends RuntimeException {

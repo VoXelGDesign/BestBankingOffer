@@ -20,7 +20,7 @@ import pl.polsl.student.jakunow552.bestbankingoffer.view.TextUserInterface;
  * {@link Controller#tui} - object of text user interface.<p>
  * {@link Controller#offersList} - list of offers to operate and display
  * them.<p>
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public class Controller {
@@ -44,9 +44,8 @@ public class Controller {
     }
 
     /**
-     * Start method take care of inicializing controler,
-     * handling exepctions, initializes graphical user interface, sends and
-     * control data.<p>
+     * Start method take care of inicializing controler, handling exepctions,
+     * initializes graphical user interface, sends and control data.<p>
      * To achive dark swing theme it utilize
      * {@link com.formdev.flatlaf.FlatDarculaLaf} setup method.
      */
@@ -59,26 +58,12 @@ public class Controller {
         String descriptionNaToCoLubisz = "\"Oferta chwilówki to propozycja pożyczki krótkoterminowej, która umożliwia klientowi szybkie uzyskanie potrzebnych środków finansowych na krótki okres czasu - zazwyczaj od kilku dni do kilku tygodni. Chwilówka jest często stosowana jako szybkie i proste rozwiązanie dla osób, które potrzebują pilnej gotówki, ale nie mogą lub nie chcą skorzystać z tradycyjnych form pożyczania.\"";
         String descriptionKredytNaDom = "\"Oferta kredytu na dom to propozycja finansowania zakupu nieruchomości mieszkaniowej. Kredyt na dom umożliwia klientowi uzyskanie potrzebnych środków finansowych na sfinansowanie zakupu wybranej nieruchomości. Zazwyczaj oferta kredytu na dom obejmuje różnego rodzaju kredyty hipoteczne, które pozwalają na sfinansowanie zakupu nieruchomości w całości lub części.\"";
 
-        offersList.add(new CreditOffer("Mbank", "Kredyt na dom", 1.5f, 100.27f,descriptionKredytNaDom));
+        offersList.add(new CreditOffer("Mbank", "Kredyt na dom", 1.5f, 100.27f, descriptionKredytNaDom));
         offersList.add(new CreditOffer("Milenium", "Na to co lubisz", 1.4f, 100.27f, descriptionNaToCoLubisz));
         offersList.add(new CreditOffer("Santander", "Kup teraz a zapłać za miesiąc", 1.6f, 1.27f, descriptionKupTeraz));
-        offersList.add(new PersonalAccountOffer("Milenium", "Konto dla młodych", 1.5f, 10f,descriptionKontoDlaMlodych));
-        offersList.add(new PersonalAccountOffer("Revolut", "Zwykle konto", 1.6f, 10f,descriptionZwykleKonto));
+        offersList.add(new PersonalAccountOffer("Milenium", "Konto dla młodych", 1.5f, 10f, descriptionKontoDlaMlodych));
+        offersList.add(new PersonalAccountOffer("Revolut", "Zwykle konto", 1.6f, 10f, descriptionZwykleKonto));
         //*********************************************************
-        
-
-        //Example of user exeption handling
-        try {
-            offersList.get(2).compareOffers(offersList.get(1));
-        } catch (Exception e) {
-            tui.displayException(e);
-        }
-
-        try {
-            offersList.get(1).setProperty("Rate of Interest", -1);
-        } catch (Exception e) {
-            tui.displayException(e);
-        }
 
         //Main initialization in respect to provided arguments 
         if (params.isEmpty()) {

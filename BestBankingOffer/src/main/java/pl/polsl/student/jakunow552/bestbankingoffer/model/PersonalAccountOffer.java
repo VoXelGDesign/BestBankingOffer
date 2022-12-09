@@ -13,7 +13,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * Methods added coresponds to specific prameters assigned to the personal
  * account offer.
  *
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public class PersonalAccountOffer extends BankingOffer {

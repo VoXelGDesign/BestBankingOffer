@@ -11,7 +11,7 @@ package pl.polsl.student.jakunow552.bestbankingoffer.model;
  * Program do not allow to comapare different types of offers objects because
  * they have different properties.
  *
- * @version 2.0-FINAL
+ * @version 3.0-FINAL
  * @author Jakub Nowakowski
  */
 public class TypeException extends RuntimeException {
